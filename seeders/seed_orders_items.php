@@ -65,7 +65,7 @@ try{
   $q = $db->prepare("INSERT INTO orders_items VALUES $values");
   $q->execute();
 
-  echo "+ orders_items \t\t\t table seeded".PHP_EOL;
+  echo "+ orders_items".PHP_EOL;
 }catch(Exception $e){
   echo $e;
 }

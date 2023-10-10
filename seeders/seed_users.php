@@ -60,7 +60,7 @@ try{
   $q = $db->prepare("INSERT INTO users VALUES $values");
   $q->execute();
 
-  echo "+ users \t\t\t table seeded".PHP_EOL;
+  echo "+ users".PHP_EOL;
 }catch(Exception $e){
   echo $e;
 }

@@ -26,7 +26,7 @@ try{
                       ('4e8f0d641fff4cd6aed260c4521718e8', 'employee', $created_at, 0)");
   $q->execute();
 
-  echo "+ roles \t\t\t table seeded".PHP_EOL;
+  echo "+ roles".PHP_EOL;
 }catch(Exception $e){
   echo $e;
 }
