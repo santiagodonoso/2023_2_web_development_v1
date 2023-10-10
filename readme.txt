@@ -7,6 +7,9 @@ $ npx tailwindcss -i ./input.css -o ../app.css --watch
 
 
 ##############################
+Faker
+https://github.com/fzaninotto/Faker
+
 
 
 
