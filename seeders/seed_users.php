@@ -42,12 +42,12 @@ try{
   '$admin_password', 'Admin address', 'admin', $admin_created_at, $admin_updated_at, $admin_deleted_at),";
 
 
+  $user_password = password_hash('password', PASSWORD_DEFAULT); // too long time in loop
   for($i = 0; $i < 100; $i++){
     $user_id = bin2hex(random_bytes(16));
     $user_name = str_replace("'", "''", $faker->firstName);
     $user_last_name = str_replace("'", "''", $faker->lastName);
     $user_email = $faker->unique->email;
-    $user_password = password_hash('password', PASSWORD_DEFAULT);
     $user_address = str_replace("'", "''", $faker->address);
     $user_role_name = $roles[array_rand($roles)];
     $user_created_at = time();

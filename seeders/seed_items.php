@@ -43,7 +43,7 @@ try{
   $q = $db->prepare("INSERT INTO items VALUES $values");
   $q->execute();
 
-  echo "+ items \t\t\t table seeded".PHP_EOL;
+  echo "+ items".PHP_EOL;
 }catch(Exception $e){
   echo $e;
 }
