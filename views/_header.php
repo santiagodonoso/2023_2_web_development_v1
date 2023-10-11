@@ -20,18 +20,8 @@ require_once __DIR__.'/../_.php';
 <body class="w-full h-screen text-base font-roboto font-light bg-slate-200
 [&_input]:h-8 [&_input]:border [&_input]:border-slate-300 [&_input]:rounded-md [&_input]:outline-none">
 
-<nav class="fixed top-0 left-0 flex flex-col gap-4 w-48 h-screen 
+<nav class="fixed top-12 left-0 flex flex-col gap-4 w-48 h-screen py-4
 text-gray-600 bg-slate-200 [&_a]:px-4">
-  
-  <a href="/" class="flex items-center h-12 bg-white">
-    <span class="material-symbols-outlined mr-2 font-thin">
-      dashboard
-    </span>
-    Home
-  </a>
-  
-
-
   
   <?php if( _is_admin() ): ?>
     <div class="flex flex-col gap-4">
@@ -77,20 +67,35 @@ text-gray-600 bg-slate-200 [&_a]:px-4">
 </nav>
 
 
+<header class="fixed top-0 flex items-center w-full h-12 px-4 bg-white">
+
+  <a href="/" class="flex items-center h-12 bg-white">
+    <span class="material-symbols-outlined mr-2 font-thin">
+      dashboard
+    </span>
+    Home
+  </a>
+
+  <form action="/search-results" method="GET" class="relative flex items-center">
+    <input name="query" type="text" class="pl-7 bg-slate-200">
+    <button class="absolute flex items-center">
+      <span class="material-symbols-outlined ml-1 font-thin">
+        search
+      </span>            
+    </button>
+  </form>
+
+  <button class="flex items-center ml-auto">
+    <span class="material-symbols-outlined font-thin">
+      menu
+    </span>            
+  </button>  
+</header>
 
 
 <main class="absolute top-0 left-48 w-[calc(100%-12rem)] h-full"> 
   
-    <header class="fixed top-0 left-48 flex items-center w-full h-12 bg-white">
-      <form action="/search-results" method="GET" class="relative flex items-center">
-        <input name="query" type="text" class="pl-7 bg-slate-200">
-        <button class="absolute flex items-center">
-          <span class="material-symbols-outlined ml-1 font-thin">
-            search
-          </span>            
-        </button>
-      </form>
-    </header>
+
 
 
 

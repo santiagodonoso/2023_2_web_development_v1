@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__.'/_header.php';
-_is_admin(); // middleware
+if(!_is_admin()){ header('Location: /login'); exit(); };
 
 $db = _db();
 $q = $db->prepare(' SELECT user_id, user_name, user_last_name, user_email, user_tag_color
@@ -10,10 +10,10 @@ $users = $q->fetchAll();
 ?>
 
 
-<div class="mt-16 pb-12 mr-4 px-4 bg-white rounded-md text-slate-500">
+<div class="mt-16 pb-20 mr-4 px-4 bg-white rounded-md text-slate-500">
 
   <div class="flex py-4 text-xl">
-    <h1>
+    <h1 class="text-black">
       Customers
     </h1>
     <form action="/search-results" method="GET" class="relative flex items-center ml-auto">
