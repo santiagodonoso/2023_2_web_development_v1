@@ -17,6 +17,11 @@ text-white bg-sky-700">
   
   <a href="/">Home</a>
   
+  <form>
+    <input type="text" class="text-black">
+    <button>Search</button>
+  </form>
+
   
   <?php if( $_SESSION && $_SESSION['user']['user_role_name'] == 'admin' ): ?>
     <div class="flex gap-4 mx-auto">
