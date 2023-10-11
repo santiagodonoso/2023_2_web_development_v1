@@ -1,6 +1,8 @@
 <?php
 
-if($_POST){
+if($_POST){ login(); }
+
+function login(){
   echo 'xxxxxxxxxxxxxxxxxx';
 }
 
