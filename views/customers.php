@@ -16,7 +16,7 @@ $users = $q->fetchAll();
   <?php endif ?>
 
   <?php foreach($users as $user): ?>
-    <div class="">
+    <div class="flex">
       <div class=""><?= $user['user_id'] ?></div>
       <div class=""><?php out($user['user_name']) ?></div>
       <div class=""><?php out($user['user_last_name']) ?></div>
