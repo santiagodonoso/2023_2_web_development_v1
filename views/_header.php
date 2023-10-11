@@ -17,8 +17,8 @@ text-white bg-sky-700">
   
   <a href="/">Home</a>
   
-  <form>
-    <input type="text" class="text-black">
+  <form action="/search-results" method="GET">
+    <input name="query" type="text" class="text-black">
     <button>Search</button>
   </form>
 
