@@ -6,3 +6,8 @@
   <title>Document</title>
 </head>
 <body>
+
+<nav class="">
+  <a href="/">Home</a>
+  <a href="/login">Login</a>
+</nav>
