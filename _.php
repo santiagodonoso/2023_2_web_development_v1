@@ -121,4 +121,9 @@ function _is_admin(){
   }  
 }
 
+// ##############################
+function out($text){
+  echo htmlspecialchars($text);
+}
+
 

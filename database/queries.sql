@@ -13,3 +13,9 @@ SELECT * FROM users
 
 
 
+UPDATE users
+SET user_name = '<script>alert()</script>'
+WHERE user_id = 'd813e27644c19c01cfc4e160268c120e'
+
+
+
