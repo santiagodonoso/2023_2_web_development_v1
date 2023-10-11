@@ -1,9 +1,14 @@
 <?php
 
+
 if($_POST){ login(); }
 
 function login(){
-  echo 'xxxxxxxxxxxxxxxxxx';
+  require_once __DIR__.'/../_.php';
+  // TODO: validate
+  $user_email = $_POST['user_email'];
+  $user_password = $_POST['user_password'];
+  
 }
 
 
