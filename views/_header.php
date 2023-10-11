@@ -26,6 +26,12 @@ text-white bg-sky-700">
     </div>
   <?php endif ?>
     
-  <a href="/login" class="ml-auto">Login</a>
-  <a href="/logout" class="ml-auto">Logout</a>
+
+  <?php if( ! isset($_SESSION['user']) ): ?>
+    <a href="/login" class="ml-auto">Login</a>
+  <?php else: ?>
+    <a href="/logout" class="ml-auto">Logout</a>
+  <?php endif ?>  
+
+
 </nav>
