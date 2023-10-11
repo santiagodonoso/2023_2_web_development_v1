@@ -9,7 +9,7 @@ $q->execute();
 $users = $q->fetchAll();                  
 ?>
 
-<main>
+<main class="px-4">
   Customers
   <?php if( ! $users ): ?>
     <h1>No customers in the system</h1>
@@ -17,11 +17,11 @@ $users = $q->fetchAll();
 
   <?php foreach($users as $user): ?>
     <div class="flex">
-      <div class=""><?= $user['user_id'] ?></div>
-      <div class=""><?php out($user['user_name']) ?></div>
-      <div class=""><?php out($user['user_last_name']) ?></div>
-      <div class=""><?php out($user['user_email']) ?></div>
-      <button>🗑️</button>
+      <div class="hidden"><?= $user['user_id'] ?></div>
+      <div class="w-1/4"><?php out($user['user_name']) ?></div>
+      <div class="w-1/4"><?php out($user['user_last_name']) ?></div>
+      <div class="w-1/4"><?php out($user['user_email']) ?></div>
+      <button class="w-1/4">🗑️</button>
     </div>
   <?php endforeach ?>
 

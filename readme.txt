@@ -11,7 +11,10 @@ Faker
 https://github.com/fzaninotto/Faker
 
 
-
+##############################
+git add .
+git stash
+git pull
 
 
 
