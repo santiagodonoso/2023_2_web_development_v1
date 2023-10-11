@@ -112,4 +112,9 @@ function _validate_user_confirm_password(){
 }
 
 
+// ##############################
+function _is_admin(){
+  
+}
+
 

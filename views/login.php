@@ -6,8 +6,7 @@ if($_POST){ login(); }
 function login(){
   require_once __DIR__.'/../_.php';
   // TODO: validate
-  $user_email = $_POST['user_email'];
-  $user_password = $_POST['user_password'];
+
   $db = _db();
   $q = $db->prepare('SELECT * FROM users WHERE user_email = :user_email');
   $q->bindValue(':user_email', $_POST['user_email']);
@@ -21,7 +20,7 @@ function login(){
     echo 'Try again';
     return;
   }
-  
+
   session_start();
   unset($user['user_password']);
   echo json_encode($user);
