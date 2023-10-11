@@ -115,10 +115,7 @@ function _validate_user_confirm_password(){
 
 // ##############################
 function _is_admin(){
-  if( $_SESSION['user']['user_role_name'] != 'admin'){
-    header('Location: /login');
-    exit();
-  }  
+  return (! isset($_SESSION['user']) || $_SESSION['user']['user_role_name'] != 'admin') ? false : true;
 }
 
 // ##############################

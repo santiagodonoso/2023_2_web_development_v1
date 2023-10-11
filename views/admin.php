@@ -1,6 +1,9 @@
 <?php
 require_once __DIR__.'/../_.php';
-_is_admin(); // middleware
+if( ! _is_admin()){
+  header('Location: /login'); 
+  exit();
+}
 
 require_once __DIR__.'/_header.php';
 ?>

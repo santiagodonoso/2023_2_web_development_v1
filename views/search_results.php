@@ -12,14 +12,15 @@ $users = $q->fetchAll();
 
 ?>
 
-<main>
+<main class="px-4">
 <?php foreach($users as $user): ?>
     <div class="flex">
       <div class="hidden"><?= $user['user_id'] ?></div>
-      <div class="w-1/4"><?php out($user['user_name']) ?></div>
-      <div class="w-1/4"><?php out($user['user_last_name']) ?></div>
-      <div class="w-1/4"><?php out($user['user_email']) ?></div>
-      <button class="w-1/4">🗑️</button>
+      <div class="w-1/5"><?php out($user['user_name']) ?></div>
+      <div class="w-1/5"><?php out($user['user_last_name']) ?></div>
+      <div class="w-1/5"><?php out($user['user_email']) ?></div>
+      <div class="w-1/5"><?php out($user['user_role_name']) ?></div>
+      <button class="w-1/5">🗑️</button>
     </div>
   <?php endforeach ?>
 </main>

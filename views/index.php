@@ -7,9 +7,8 @@ $user_name = out('<script>alert</script>'); // This came from the database/API
 
 ?>
 
-<main>
+<main class="absolute top-0 left-48 w-[calc(100%-12rem)] h-full">
   Home
-  <?= $user_name ?>
 </main>
 
 <?php
