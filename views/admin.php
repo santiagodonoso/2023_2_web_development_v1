@@ -3,9 +3,7 @@ require_once __DIR__.'/_header.php';
 ?>
 
 <main>
-  <form method="POST">
-    <button>Login</button>
-  </form>
+  Admin
 </main>
 
 <?php
