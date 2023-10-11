@@ -18,9 +18,9 @@ $users = $q->fetchAll();
   <?php foreach($users as $user): ?>
     <div class="">
       <div class=""><?= $user['user_id'] ?></div>
-      <div class=""><?= $user['user_name'] ?></div>
-      <div class=""><?= $user['user_last_name'] ?></div>
-      <div class=""><?= $user['user_email'] ?></div>
+      <div class=""><?php out($user['user_name']) ?></div>
+      <div class=""><?php out($user['user_last_name']) ?></div>
+      <div class=""><?php out($user['user_email']) ?></div>
       <button>🗑️</button>
     </div>
   <?php endforeach ?>
