@@ -1,6 +1,7 @@
 <?php
 
 ini_set('display_errors', 1);
+session_start();
 
 // ##############################
 function _db(){
@@ -114,7 +115,10 @@ function _validate_user_confirm_password(){
 
 // ##############################
 function _is_admin(){
-  
+  if( $_SESSION['user']['user_role_name'] != 'admin'){
+    header('Location: /login');
+    exit();
+  }  
 }
 
 

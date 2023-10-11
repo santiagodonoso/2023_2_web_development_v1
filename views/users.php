@@ -6,7 +6,7 @@ require_once __DIR__.'/_header.php';
 ?>
 
 <main>
-  Admin
+  Users
 </main>
 
 <?php
