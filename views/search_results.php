@@ -2,8 +2,11 @@
 require_once __DIR__.'/_header.php';
 
 $db = _db();
-$q = $db->prepare('SELECT * FROM users WHERE user_name = :user_name COLLATE NOCASE');
-$q->bindValue(':user_name', $_GET['query']);
+$q = $db->prepare(' SELECT * FROM users 
+                    WHERE user_name = :word COLLATE NOCASE 
+                    OR user_last_name = :word COLLATE NOCASE');
+                    
+$q->bindValue(':word', $_GET['query']);
 $q->execute();
 $users = $q->fetchAll();
 
