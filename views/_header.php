@@ -69,8 +69,8 @@ text-gray-600 bg-slate-200 [&_a]:px-4">
 
 <header class="fixed top-0 flex items-center w-full h-12 px-4 bg-white">
 
-  <a href="/" class="flex items-center h-12 bg-white">
-    <span class="material-symbols-outlined mr-2 font-thin">
+  <a href="/" class="flex items-center w-44 h-12 bg-white">
+    <span class="material-symbols-outlined font-thin">
       dashboard
     </span>
     Home
