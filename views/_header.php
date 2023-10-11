@@ -17,7 +17,7 @@ require_once __DIR__.'/../_.php';
   <a href="/logout">Logout</a>
 
   <?php if( $_SESSION && $_SESSION['user']['user_role_name'] == 'admin' ): ?>
-    <a href="/users">Users</a>
+    <a href="/customers">Customers</a>
     <a href="/employees">Employes</a>
     <a href="/partners">partners</a>
   <?php endif ?>

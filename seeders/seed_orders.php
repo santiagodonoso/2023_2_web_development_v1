@@ -5,8 +5,8 @@ $faker = Faker\Factory::create();
 
 try{
 
-  // Get users whos role is "user" to assign to orders
-  $user_role_name = 'user';
+  // Get users whos role is "customer" to assign to orders
+  $user_role_name = 'customer';
   $db = _db();
   $q = $db->prepare("SELECT user_id FROM users WHERE user_role_name == '$user_role_name'");
   $q->execute();

@@ -22,7 +22,7 @@ try{
   $created_at = time();
   $q = $db->prepare(" INSERT INTO roles VALUES 
                       ('113201f10aaa410f9b7b9f0a6477b443', 'partner', $created_at, 0),
-                      ('a3280a85612746c38a17465530739090', 'user', $created_at, 0),
+                      ('a3280a85612746c38a17465530739090', 'customer', $created_at, 0),
                       ('4e8f0d641fff4cd6aed260c4521718e8', 'employee', $created_at, 0)");
   $q->execute();
 

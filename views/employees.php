@@ -3,10 +3,17 @@ require_once __DIR__.'/_header.php';
 _is_admin(); // middleware
 
 $db = _db();
-$q = $db->prepare(' SELECT user_id, user_name, user_last_name, user_email 
-                    FROM users WHERE user_role_name = "employee" LIMIT 10');
+
+$q = $db->prepare(' SELECT user_id, user_name, 
+                    user_last_name, user_email, employee_salary 
+                    FROM users INNER JOIN employees 
+                    ON user_id = employee_id 
+                    WHERE user_role_name = "employee" 
+                    LIMIT 10');
+
 $q->execute();
-$users = $q->fetchAll();                  
+$users = $q->fetchAll();  
+              
 ?>
 
 <main>
@@ -21,6 +28,7 @@ $users = $q->fetchAll();
       <div class=""><?= $user['user_name'] ?></div>
       <div class=""><?= $user['user_last_name'] ?></div>
       <div class=""><?= $user['user_email'] ?></div>
+      <div class=""><?= $user['employee_salary']/100 ?></div>
     </div>
   <?php endforeach ?>
 
