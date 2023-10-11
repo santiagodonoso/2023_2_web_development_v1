@@ -67,7 +67,7 @@ text-gray-600 bg-slate-200 [&_a]:px-4">
 </nav>
 
 
-<header class="fixed top-0 flex items-center w-full h-12 px-4 bg-white">
+<header class="fixed top-0 flex items-center w-full h-12 px-4 bg-white z-10">
 
   <a href="/" class="flex items-center w-44 h-12 bg-white">
     <span class="material-symbols-outlined font-thin">

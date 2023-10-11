@@ -562,6 +562,10 @@ video {
   top: 3rem;
 }
 
+.z-10 {
+  z-index: 10;
+}
+
 .m-auto {
   margin: auto;
 }
