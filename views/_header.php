@@ -16,7 +16,7 @@ session_start();
   <a href="/login">Login</a>
   <a href="/logout">Logout</a>
 
-  <?php if( $_SESSION['user']['user_role_name'] != 'admin' ): ?>
+  <?php if( $_SESSION['user']['user_role_name'] == 'admin' ): ?>
     <a href="/users">Users</a>
     <a href="/employees">Employes</a>
     <a href="/partners">partners</a>
