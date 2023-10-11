@@ -21,6 +21,7 @@ function login(){
     echo 'Try again';
     return;
   }
+  
   session_start();
   unset($user['user_password']);
   echo json_encode($user);
