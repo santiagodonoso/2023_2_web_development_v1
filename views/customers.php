@@ -17,7 +17,10 @@ $users = $q->fetchAll();
       Customers
     </h1>
     
-    <?php include_once __DIR__.'/_form_search.php' ?>
+    <?php 
+    $frm_search_url = 'api-search-customers.php';
+    include_once __DIR__.'/_form_search.php' 
+    ?>
 
   </div>
 
