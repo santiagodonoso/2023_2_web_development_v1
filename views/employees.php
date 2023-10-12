@@ -17,7 +17,11 @@ $users = $q->fetchAll();
       Employees
     </h1>
     <form action="/search-results" method="GET" class="relative flex items-center w-1/3 ml-auto">
-      <input name="query" type="text" class="w-full pl-7 bg-slate-200" placeholder="Search">
+      <input name="query" type="text" 
+      class="w-full pl-7 bg-slate-200" 
+      placeholder="Search"
+      oninput="search_employees()"
+      >
       <button class="absolute flex items-center">
         <span class="material-symbols-outlined ml-1 font-thin">
           search

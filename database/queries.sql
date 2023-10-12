@@ -46,11 +46,17 @@ ON user_id = employee_id
 
 SELECT * FROM employees_info
 
-
-
 SELECT * FROM users WHERE user_id = '71665dc11bf5759f452c26453ed66a47'
 
 
+
+
+SELECT user_name, user_last_name, employee_salary
+FROM users
+JOIN employees 
+ON user_id = employee_id
+WHERE user_name LIKE '%e%' COLLATE NOCASE 
+OR user_last_name LIKE '%x%' COLLATE NOCASE 
 
 
 
