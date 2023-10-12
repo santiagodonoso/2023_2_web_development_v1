@@ -1,4 +1,7 @@
-<form id="frm_search" action="/search-results" method="GET" class="relative flex items-center w-1/3 ml-auto">
+
+
+
+<form data-url="api-search-employees.php" id="frm_search" action="/search-results" method="GET" class="relative flex items-center w-1/3 ml-auto">
   <input name="query" type="text" 
   class="w-full pl-7 bg-slate-200" 
   placeholder="Search"

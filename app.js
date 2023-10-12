@@ -5,7 +5,9 @@ function search_users(){
   clearTimeout(timer_search_users)
   timer_search_users = setTimeout(async function(){ 
     const frm = document.querySelector("#frm_search")
-    const conn = await fetch("/api/api-search-employees.php", {
+    const url = frm.getAttribute('data-url')
+    console.log("URL: ", url)
+    const conn = await fetch(`/api/${url}`, {
       method : "POST",
       body : new FormData(frm)
     })
