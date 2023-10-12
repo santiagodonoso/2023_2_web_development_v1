@@ -27,7 +27,7 @@ $users = $q->fetchAll();
           search
         </span>            
       </button>
-      <div class="absolute top-full w-full h-48 bg-white border border-slate-300">
+      <div id="query_results" class="absolute top-full w-full h-48 bg-white border border-slate-300">
         <div class="grid grid-cols-[100fr,100fr,50fr] p-2">
           <div class="">Abigayle</div>
           <div class="">Wunsch</div>
