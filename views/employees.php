@@ -21,6 +21,8 @@ $users = $q->fetchAll();
       class="w-full pl-7 bg-slate-200" 
       placeholder="Search"
       oninput="search_employees()"
+      onfocus="document.querySelector('#query_results').classList.remove('hidden')"
+      onblur="document.querySelector('#query_results').classList.add('hidden')"
       >
       <button class="absolute flex items-center">
         <span class="material-symbols-outlined ml-1 font-thin">
@@ -28,9 +30,8 @@ $users = $q->fetchAll();
         </span>            
       </button>
       <div id="query_results" 
-      class="absolute top-full w-full h-48 bg-white border 
-      border-slate-300 overflow-hidden overflow-y-visible">
-        
+      class="hidden absolute top-full w-full h-48 bg-white border 
+      border-slate-300 overflow-hidden overflow-y-visible">        
       </div>
     </form>
   </div>
