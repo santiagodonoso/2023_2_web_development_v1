@@ -16,21 +16,9 @@ $users = $q->fetchAll();
     <h1 class="text-black">
       Customers
     </h1>
-    <form action="/search-results" method="GET" class="relative flex items-center w-1/3 ml-auto">
-      <input name="query" type="text" class="w-full pl-7 bg-slate-200" placeholder="Search">
-      <button class="absolute flex items-center">
-        <span class="material-symbols-outlined ml-1 font-thin">
-          search
-        </span>            
-      </button>
-      <div class="absolute top-full w-full h-48 bg-white border border-slate-300">
-        <div class="grid grid-cols-[100fr,100fr,50fr] p-2">
-          <div class="">Abigayle</div>
-          <div class="">Wunsch</div>
-          <div class="">10000</div>
-        </div>
-      </div>
-    </form>
+    
+    <?php include_once __DIR__.'/_form_search.php' ?>
+
   </div>
 
 

@@ -16,14 +16,9 @@ $users = $q->fetchAll();
     <h1 class="text-black">
       Partners
     </h1>
-    <form action="/search-results" method="GET" class="relative flex items-center ml-auto">
-      <input name="query" type="text" class="pl-7 bg-slate-200">
-      <button class="absolute flex items-center">
-        <span class="material-symbols-outlined ml-1 font-thin">
-          search
-        </span>            
-      </button>
-    </form>
+
+    <?php include_once __DIR__.'/_form_search.php' ?>
+    
   </div>
 
 

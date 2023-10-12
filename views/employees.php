@@ -16,24 +16,9 @@ $users = $q->fetchAll();
     <h1 class="text-black">
       Employees
     </h1>
-    <form id="frm_search_employee" action="/search-results" method="GET" class="relative flex items-center w-1/3 ml-auto">
-      <input name="query" type="text" 
-      class="w-full pl-7 bg-slate-200" 
-      placeholder="Search"
-      oninput="search_employees()"
-      onfocus="document.querySelector('#query_results').classList.remove('hidden')"
-      onblur="document.querySelector('#query_results').classList.add('hidden')"
-      >
-      <button class="absolute flex items-center">
-        <span class="material-symbols-outlined ml-1 font-thin">
-          search
-        </span>            
-      </button>
-      <div id="query_results" 
-      class="hidden absolute top-full w-full h-48 bg-white border 
-      border-slate-300 overflow-hidden overflow-y-visible">        
-      </div>
-    </form>
+
+    <?php include_once __DIR__.'/_form_search.php' ?>
+
   </div>
 
 
